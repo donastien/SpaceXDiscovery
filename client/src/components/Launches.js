@@ -1,6 +1,6 @@
 import React from 'react';
 import gql from 'graphql-tag';
-import { Query } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks';
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
@@ -14,10 +14,14 @@ const LAUNCHES_QUERY = gql`
 `;
 
 const Launches = () => {
+  const { loading, error, data } = useQuery(LAUNCHES_QUERY);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
   return (
     <div>
       <h1 className='display-4 my-3'>Launches</h1>
-      <Query query={LAUNCHES_QUERY}></Query>
     </div>
   );
 };
