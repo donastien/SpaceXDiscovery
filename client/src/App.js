@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Launches from './components/Launches';
 import Launch from './components/Launch';
 import './App.css';
-import landingFont from './img/landingFont.png';
+import Landing from './components/layout/Landing';
+import Navbar from './components/layout/Navbar';
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
@@ -14,14 +15,11 @@ const client = new ApolloClient({
 const App = () => {
   return (
     <ApolloProvider client={client}>
+      <Navbar />
       <Router>
         <div className='container'>
-          <img
-            src={landingFont}
-            className='w-100 mx-auto d-block'
-            alt='SpaceX Discovery'
-          />
-          <Route exact path='/' component={Launches} />
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/launches' component={Launches} />
           <Route exact path='/launch/:flight_number' component={Launch} />
         </div>
       </Router>
