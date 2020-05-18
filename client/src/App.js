@@ -17,11 +17,9 @@ const App = () => {
     <ApolloProvider client={client}>
       <Navbar />
       <Router>
-        <div className='container'>
-          <Route exact path='/' component={Landing} />
-          <Route exact path='/launches' component={Launches} />
-          <Route exact path='/launch/:flight_number' component={Launch} />
-        </div>
+        <Route exact path='/' component={Landing} />
+        <Route exact path='/' component={Launches} />
+        <Route exact path='/launch/:flight_number' component={Launch} />
       </Router>
     </ApolloProvider>
   );

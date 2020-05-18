@@ -19,20 +19,38 @@ const Launches = () => {
   const { loading, error, data } = useQuery(LAUNCHES_QUERY);
   if (loading)
     return (
-      <div class='spinner-grow text-light' role='status'>
-        <span class='sr-only'>Loading...</span>
+      <div className='spinner-grow text-light' role='status'>
+        <span className='sr-only'>Loading...</span>
       </div>
     );
   if (error) return <p>Error :(</p>;
 
   return (
-    <Fragment>
-      <h1 className='display-4 my-3'>Launches</h1>
-      <MissionKey />
-      {data.launches.map((launch) => (
-        <LaunchItem key={launch.flight_number} launch={launch} />
-      ))}
-    </Fragment>
+    <section className='download bg-primary text-center' id='download'>
+      <div className='container-fluid'>
+        <div className='row'>
+          <div className='col-md-8 mx-auto'>
+            <h1 className='display-4 my-3'>Missions</h1>
+            <MissionKey />
+            <table className='table table-striped table-dark'>
+              <thead>
+                <tr>
+                  <th scope='col'>ID</th>
+                  <th scope='col'>Mission Name</th>
+                  <th scope='col'>Date</th>
+                  <th scope='col'>Success</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.launches.map((launch) => (
+                  <LaunchItem key={launch.flight_number} launch={launch} />
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

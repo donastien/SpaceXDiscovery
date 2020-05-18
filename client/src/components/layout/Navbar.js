@@ -2,45 +2,45 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav class='navbar navbar-expand-lg navbar-light bg-light'>
-      <a class='navbar-brand' href='#'>
-        SpaceX Discovery
-      </a>
-      <button
-        class='navbar-toggler'
-        type='button'
-        data-toggle='collapse'
-        data-target='#navbarColor01'
-        aria-controls='navbarColor01'
-        aria-expanded='false'
-        aria-label='Toggle navigation'
-      >
-        <span class='navbar-toggler-icon'></span>
-      </button>
-
-      <div class='collapse navbar-collapse' id='navbarColor01'>
-        <ul class='navbar-nav mr-auto'>
-          <li class='nav-item active'>
-            <a class='nav-link' href='#'>
-              Home <span class='sr-only'>(current)</span>
-            </a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' href='#'>
-              Lancements
-            </a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' href='#'>
-              Missions
-            </a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' href='#'>
-              About
-            </a>
-          </li>
-        </ul>
+    <nav
+      class='navbar navbar-expand-lg navbar-light fixed-top bg-dark'
+      id='mainNav'
+    >
+      <div class='container'>
+        <a class='navbar-brand js-scroll-trigger' href='#page-top'>
+          Space X Discover
+        </a>
+        <button
+          class='navbar-toggler navbar-toggler-right'
+          type='button'
+          data-toggle='collapse'
+          data-target='#navbarResponsive'
+          aria-controls='navbarResponsive'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+        >
+          Menu
+          <i class='fas fa-bars'></i>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarResponsive'>
+          <ul class='navbar-nav ml-auto'>
+            <li class='nav-item'>
+              <a class='nav-link js-scroll-trigger' href='#download'>
+                Lancements
+              </a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link js-scroll-trigger' href='#features'>
+                Features
+              </a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link js-scroll-trigger' href='#contact'>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
