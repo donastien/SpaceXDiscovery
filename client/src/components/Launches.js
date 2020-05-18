@@ -31,7 +31,7 @@ const Launches = () => {
         <div className='row'>
           <div className='col-md-8 mx-auto'>
             <h1 className='display-4 my-3'>Missions</h1>
-            <MissionKey />
+
             <table className='table table-striped table-dark'>
               <thead>
                 <tr>

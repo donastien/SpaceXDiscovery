@@ -60,7 +60,7 @@ class Countdown extends React.Component {
             </div>
           )}
           {seconds && (
-            <div className='countdown-item'>
+            <div className='countdown-item text-warning'>
               {seconds}
               <span>secondes</span>
             </div>

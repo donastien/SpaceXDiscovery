@@ -8,7 +8,7 @@ const Navbar = () => {
     >
       <div class='container'>
         <a class='navbar-brand js-scroll-trigger' href='#page-top'>
-          Space X Discover
+          Space X Discovery
         </a>
         <button
           class='navbar-toggler navbar-toggler-right'
@@ -26,17 +26,12 @@ const Navbar = () => {
           <ul class='navbar-nav ml-auto'>
             <li class='nav-item'>
               <a class='nav-link js-scroll-trigger' href='#download'>
-                Lancements
+                Missions
               </a>
             </li>
             <li class='nav-item'>
               <a class='nav-link js-scroll-trigger' href='#features'>
-                Features
-              </a>
-            </li>
-            <li class='nav-item'>
-              <a class='nav-link js-scroll-trigger' href='#contact'>
-                Contact
+                Rockets
               </a>
             </li>
           </ul>

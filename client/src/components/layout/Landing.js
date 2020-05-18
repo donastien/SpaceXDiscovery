@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
+// Requête pour récupérer les données sur prochain lancement.
 const NEXTLAUNCH_QUERY = gql`
   query nextLaunchQuery {
     nextLaunch {
@@ -30,15 +31,17 @@ const Landing = () => {
   const momentDate = moment(launch_date_local).format('MM DD YYYY, h:mm a');
 
   return (
-    <header class='masthead'>
+    <header className='masthead'>
       {' '}
-      <div class='container h-100'>
-        <div class='row h-100'>
-          <div class='col-lg-7 my-auto'>
-            <div class='header-content mx-auto'>
-              <h1 class='mb-5'>
-                <h1>Prochain Lancement : </h1>
-                <h1 className='text-warning'>{mission_name}</h1>
+      <div className='container h-100'>
+        <div className='row h-100'>
+          <div className='col-lg-12 my-auto'>
+            <div className='header-content mx-auto'>
+              <h1 className='mb-4'>
+                <h1 className='text-center'>
+                  Prochain Lancement de la Mission{' '}
+                </h1>
+                <h1 className='text-center text-danger mb-4'>{mission_name}</h1>
                 <Countdown
                   timeTillDate={momentDate}
                   timeFormat='MM DD YYYY, h:mm a'
@@ -46,7 +49,7 @@ const Landing = () => {
               </h1>
               <Link
                 to={`/launch/${flight_number}`}
-                class='btn btn-outline btn-xl js-scroll-trigger'
+                className='btn btn-outline btn-xl js-scroll-trigger'
               >
                 Détails de la mission
               </Link>
