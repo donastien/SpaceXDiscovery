@@ -7,6 +7,7 @@ import Launch from './components/Launch';
 import './App.css';
 import Landing from './components/layout/Landing';
 import Navbar from './components/layout/Navbar';
+import Rockets from './components/Rockets';
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
@@ -19,6 +20,7 @@ const App = () => {
       <Router>
         <Route exact path='/' component={Landing} />
         <Route exact path='/' component={Launches} />
+        <Route exact path='/' component={Rockets} />
         <Route exact path='/launch/:flight_number' component={Launch} />
       </Router>
     </ApolloProvider>
