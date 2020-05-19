@@ -25,7 +25,7 @@ const Rockets = () => {
           <div className='col-lg-3 text-center'>
             <img src={falconheavy} class='img-fluid' alt='' />
           </div>
-          <div className='col-lg-3 text-center border'>
+          <div className='col-lg-3 text-center'>
             <img src={starships} class='starships img-fluid' alt='' />
           </div>
         </div>

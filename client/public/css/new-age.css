@@ -247,7 +247,8 @@ section.rockets {
 }
 
 .starships {
-  margin-inline-start: auto;
+  position: absolute;
+  bottom: 0;
 }
 
 section.rockets .section-heading {
