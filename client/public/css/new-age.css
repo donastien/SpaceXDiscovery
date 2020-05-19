@@ -242,6 +242,14 @@ section.rockets {
   background-color: black;
 }
 
+.falcon1 {
+  margin-top: 400px;
+}
+
+.starships {
+  margin-inline-start: auto;
+}
+
 section.rockets .section-heading {
   margin-bottom: 100px;
 }
