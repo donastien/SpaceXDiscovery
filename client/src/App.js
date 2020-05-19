@@ -19,7 +19,6 @@ const App = () => {
       <Navbar />
       <Router>
         <Route exact path='/' component={Landing} />
-
         <Route exact path='/' component={Rockets} />
         <Route exact path='/' component={Launches} />
         <Route exact path='/launch/:flight_number' component={Launch} />
