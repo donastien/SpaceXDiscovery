@@ -50,7 +50,7 @@ class Countdown extends React.Component {
           {hours && (
             <div className='countdown-item'>
               {hours}
-              <span>heurs</span>
+              <span>heures</span>
             </div>
           )}
           {minutes && (

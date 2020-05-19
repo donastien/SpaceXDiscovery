@@ -26,18 +26,20 @@ const Launches = () => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <section className='download bg-primary text-center' id='download'>
+    <section className='missions bg-primary text-center' id='missions'>
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-8 mx-auto'>
-            <h1 className='display-4 my-3'>Missions</h1>
+            <h1 className='display-4'>
+              <i class='fas fa-rocket fa-w-20 fa-3x mb-4'></i>
+            </h1>
 
-            <table className='table table-striped table-dark'>
+            <table className='table table-striped table-dark rounded-lg'>
               <thead>
                 <tr>
                   <th scope='col'>ID</th>
                   <th scope='col'>Mission Name</th>
-                  <th scope='col'>Date</th>
+                  <th scope='col'>Date de lancement</th>
                   <th scope='col'>Success</th>
                 </tr>
               </thead>

@@ -2,10 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav
-      class='navbar navbar-expand-lg navbar-light fixed-top bg-dark'
-      id='mainNav'
-    >
+    <nav class='navbar navbar-expand-lg navbar-light fixed-top' id='mainNav'>
       <div class='container'>
         <a class='navbar-brand js-scroll-trigger' href='#page-top'>
           Space X Discovery
@@ -25,7 +22,7 @@ const Navbar = () => {
         <div class='collapse navbar-collapse' id='navbarResponsive'>
           <ul class='navbar-nav ml-auto'>
             <li class='nav-item'>
-              <a class='nav-link js-scroll-trigger' href='#download'>
+              <a class='nav-link js-scroll-trigger' href='#missions'>
                 Missions
               </a>
             </li>
