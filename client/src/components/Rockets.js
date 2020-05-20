@@ -7,7 +7,7 @@ import starships from '../img/starships.png';
 const Rockets = () => {
   return (
     <section class='rockets' id='rockets'>
-      <div class='container-fluid'>
+      <div class='container'>
         <div class='titlerockets section-heading text-light text-center'>
           <h2>Rockets</h2>
           <p class='text-muted'>Les célèbres fusées Space X.</p>

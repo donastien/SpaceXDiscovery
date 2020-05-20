@@ -8,10 +8,11 @@ const LaunchItem = ({
 }) => {
   return (
     <tr>
-      <th scope='row'>{flight_number}</th>
-      <Link to={`/launch/${flight_number}`}>
-        <td>{mission_name}</td>
-      </Link>
+      <td>{flight_number}</td>
+
+      <td>{mission_name}</td>
+
+      <td>rocket name</td>
       <td>
         {' '}
         <Moment format='DD MMMM YYYY HH:mm'>{launch_date_local}</Moment>

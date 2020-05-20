@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import LaunchItem from './LaunchItem';
-import MissionKey from './MissionKey';
+import ParticlesBg from 'particles-bg';
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
@@ -33,14 +33,14 @@ const Launches = () => {
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-8 mx-auto'>
-            <h1 className='display-4 text-light'>Missions</h1>
+            <h1 className='display-4'>Missions</h1>
 
             <div class='tbl-header'>
               <table cellpadding='0' cellspacing='0' border='0'>
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Mission Name</th>
+                    <th>Mission</th>
                     <th>Rocket</th>
                     <th>Launch Date</th>
                     <th>Success</th>
@@ -48,239 +48,19 @@ const Launches = () => {
                 </thead>
               </table>
             </div>
-            <div class='tbl-content'>
+            <div className='tbl-content'>
               <table cellpadding='0' cellspacing='0' border='0'>
                 <tbody>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAD</td>
-                    <td>AUSENCO</td>
-                    <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>AAX</td>
-                    <td>ADELAIDE</td>
-                    <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
-                  </tr>
-                  <tr>
-                    <td>XXD</td>
-                    <td>ADITYA BIRLA</td>
-                    <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
-                  </tr>
+                  {data.launches.map((launch) => (
+                    <LaunchItem key={launch.flight_number} launch={launch} />
+                  ))}
                 </tbody>
               </table>
             </div>
           </div>
         </div>
       </div>
+      <ParticlesBg type='cobweb' bg={true} />
     </section>
   );
 };
