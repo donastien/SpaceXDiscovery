@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Countdown from './Countdown';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
