@@ -19,6 +19,8 @@ const LaunchType = new GraphQLObjectType({
     launch_date_unix: { type: GraphQLInt },
     launch_date_utc: { type: GraphQLString },
     launch_success: { type: GraphQLBoolean },
+    launch_site: { type: LaunchSiteType },
+    details: { type: GraphQLString },
     rocket: { type: RocketType },
   }),
 });
@@ -30,6 +32,14 @@ const RocketType = new GraphQLObjectType({
     rocket_id: { type: GraphQLString },
     rocket_name: { type: GraphQLString },
     rocket_type: { type: GraphQLString },
+  }),
+});
+
+// Launch Site Type
+const LaunchSiteType = new GraphQLObjectType({
+  name: 'Launch_Site',
+  fields: () => ({
+    site_name_long: { type: GraphQLString },
   }),
 });
 

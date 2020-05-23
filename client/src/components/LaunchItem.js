@@ -9,6 +9,7 @@ const LaunchItem = ({
     mission_name,
     launch_date_local,
     launch_success,
+    details,
     rocket: { rocket_name, rocket_type },
   },
 }) => {
@@ -45,7 +46,7 @@ const LaunchItem = ({
       </tr>
 
       <div
-        class='modal fade'
+        className='modal fade'
         id={idModal}
         tabindex='-1'
         role='dialog'
@@ -53,31 +54,47 @@ const LaunchItem = ({
         aria-hidden='true'
       >
         <div
-          class='modal-dialog modal-dialog-centered modal-lg'
+          className='modal-dialog modal-dialog-centered modal-lg'
           role='document'
         >
-          <div class='modal-content'>
-            <div class='modal-header'>
-              <h5 class='modal-title' id='exampleModalLongTitle'>
+          <div className='modal-content'>
+            <div className='modal-header'>
+              <h5 className='modal-title' id='exampleModalLongTitle'>
                 {mission_name}
               </h5>
               <button
                 type='button'
-                class='close'
+                className='close'
                 data-dismiss='modal'
                 aria-label='Close'
               >
                 <span aria-hidden='true'>&times;</span>
               </button>
             </div>
-            <div class='modal-body'>
-              <p>
-                Date de lancement :{' '}
-                <Moment format='DD MMMM YYYY HH:mm'>{launch_date_local}</Moment>
-              </p>
-              <p>{rocket_type}</p>
+
+            <div className='modal-body'>
+              <div className='container-fluid'>
+                <div className='row'>
+                  <div class='col-md-4'>Rocket : {rocket_name}</div>
+                  <div class='col-md-4 ml-auto'>Type : {rocket_type}</div>
+                </div>
+                <div className='row'>
+                  <div className='col-md-8 mt-5 mx-auto'>
+                    {details ? details : 'No description'}
+                  </div>
+                </div>
+                <div className='row'>
+                  <div class='col-md-4 mt-5'>
+                    Date :{' '}
+                    <Moment format='DD MMMM YYYY HH:mm'>
+                      {launch_date_local}
+                    </Moment>
+                  </div>
+                  <div class='col-md-4 ml-auto mt-5'>Type : {rocket_type}</div>
+                </div>
+              </div>
             </div>
-            <div class='modal-footer'></div>
+            <div className='modal-footer'></div>
           </div>
         </div>
       </div>
