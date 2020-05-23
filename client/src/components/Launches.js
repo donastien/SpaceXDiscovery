@@ -13,6 +13,7 @@ const LAUNCHES_QUERY = gql`
       launch_success
       rocket {
         rocket_name
+        rocket_type
       }
     }
   }
